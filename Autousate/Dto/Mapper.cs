@@ -76,7 +76,21 @@ namespace Autousate.Dto {
             ConcessionariaDto dto = MapCaBaseEntityToDto(entity);
             return dto;
         }
-    
+        public Auto MapDtoToEntity(AutoDto dto)
+        {
+            return new Auto
+            {
+               
+                Produttore = dto.Produttore,
+                Modello = dto.Modello,
+                NumeroKm = dto.NumeroKm,
+                Prezzo = dto.Prezzo,
+                IdCliente = dto.IdCliente,
+                Targa = dto.Targa,
+                
+            };
+        }
+
     }
         }
         
