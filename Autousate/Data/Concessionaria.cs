@@ -5,8 +5,8 @@
         public int Id { get; set; }
         public int IdConcessionaria { get; set; }
         public string Nome { get; set; }
-        public List<Auto> AutoPresenti = [];
-        public List<Cliente> Clienti = [];
-        
+        public List<Auto> Auto = [];
+        public ICollection<Cliente> Clienti { get; set; }
+
     }
 }

@@ -8,12 +8,10 @@ namespace Autousate.Dto {
         {
             ClienteDto dto = new ClienteDto()
             {
-                IdAuto = entity.IdAuto,
-                IdCliente = entity.IdCliente,
+                Id = entity.Id,
                 Nome = entity.Nome,
                 Cognome = entity.Cognome,
-                DatadiNascita = entity.DatadiNascita,
-                NumeroCellulare = entity.NumeroCellulare,
+                IdConcessionaria = entity.IdConcessionaria,
                 Email = entity.Email,
                 Password = entity.Password,
 
@@ -31,14 +29,13 @@ namespace Autousate.Dto {
         {
             Cliente entity = new Cliente()
             {
-                IdAuto = dto.IdAuto,
-                IdCliente = dto.IdCliente,
+                Id = dto.Id,
                 Nome = dto.Nome,
                 Cognome = dto.Cognome,
-                DatadiNascita = dto.DatadiNascita,
-                NumeroCellulare = dto.NumeroCellulare,
-                Email = dto.Email,
-                Password = dto.Password,
+                IdConcessionaria= dto.IdConcessionaria,
+                Email= dto.Email,
+                Password = dto.Password
+
 
             };
             return entity;
@@ -79,7 +76,21 @@ namespace Autousate.Dto {
             ConcessionariaDto dto = MapCaBaseEntityToDto(entity);
             return dto;
         }
-    
+        public Auto MapDtoToEntity(AutoDto dto)
+        {
+            return new Auto
+            {
+               
+                Produttore = dto.Produttore,
+                Modello = dto.Modello,
+                NumeroKm = dto.NumeroKm,
+                Prezzo = dto.Prezzo,
+                IdCliente = dto.IdCliente,
+                Targa = dto.Targa,
+                
+            };
+        }
+
     }
         }
         
