@@ -11,8 +11,8 @@
         public string Targa { get; set; }
         public double NumeroKm { get; set; }
         public double Prezzo { get; set; }
-        public Cliente Cliente { get; set; }
         public Concessionaria Concessionaria { get; set; }
-        public List<Cliente> Clienti = [];
+        public Cliente Cliente { get; set; }
+        
     }
 }
