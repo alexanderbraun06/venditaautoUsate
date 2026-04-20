@@ -1,0 +1,6 @@
+@Autousate_HostAddress = http://localhost:5029
+
+GET {{Autousate_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
